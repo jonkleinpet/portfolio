@@ -45,12 +45,6 @@ const content = (function(){
     handleLearnMore();
   };
 
-  function findIndex(arr, name) {
-    for (let i = 0; i < arr.length; i++) {
-      if(arr[i].name === name) return i;
-    }
-  }
-
   // render view
   function render () {
     console.log(STORE[STORE.currentPage].content)
