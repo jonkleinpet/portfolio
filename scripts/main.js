@@ -1,8 +1,9 @@
 'use strict';
-/* global $ content STORE */
-(function(){
+/* global $ content STORE animations*/
+
   
-  $(document).ready();
+$(function() {
   content.handlers();
   content.render();
 }());
+

@@ -1,5 +1,5 @@
 'use strict';
-/* global $ STORE */
+/* global $ STORE animations */
 // eslint-disable-next-line no-unused-vars
 const content = (function(){
 // handle navigation clicks
@@ -10,12 +10,15 @@ const content = (function(){
       getView();
       render();
     });
+      
   }
   // projects nav
   function handleProjects() {
-    $('#js-projects').click(() => {
+    $('#js-projects').on('click', () => {  
       getView();
       render();
+      
+     
     });
   }
 
@@ -38,16 +41,24 @@ const content = (function(){
     return $(event.target).attr('value');
   }
 
+  function liAnimate() {
+    $('li').click(() => {
+      $('img').hide();
+      $('img').promise().done(render());
+    });
+  }
+
   // bind event listeners
   const handlers = function() {
     handleLanding();
     handleProjects();
     handleLearnMore();
+    liAnimate();
   };
 
   // render view
   function render () {
-    console.log(STORE[STORE.currentPage].content)
+    console.log(STORE[STORE.currentPage].content);
     console.log(STORE.landingView);
     $('.main').html(STORE[STORE.currentPage].content);
     $('#footer').html(STORE[STORE.currentPage].footer);
