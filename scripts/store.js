@@ -26,7 +26,7 @@ const STORE = (function(){
         `<h1 class="project">Projects</h1>
         <div class="project">
           <a href="https://thinkful-ei-armadillo.github.io/alex-jon-quiz/" class="project">
-            <img class="project" src="img/quiz-app-screenshot.jpg">
+            <img class="project" src="img/quiz-app-screenshot.jpg" alt="quiz-app project">
           </a>
         </div>
        
@@ -45,8 +45,8 @@ const STORE = (function(){
             I've been brought up with computers around my whole life and enjoy working with them or on them. I always had an interest in learning a coding language but never took the plunge. One week into JavaScript later; I was hooked and never looked back. The best thing about being a developer is no matter how many problems you solve today, tommorrow brings even more.
           </p>
           <div class="icon-container class=learnMore">
-            <a class="learnMore" href="https://www.linkedin.com/in/jonathan-kleinpeter-531a29179/"><img class="icon" src="img/linkedin-icon.png"></a>
-            <a class="learnMore" href="https://github.com/jonkleinpet"><img id="gitHub" src="img/GitHub_Logo.png"></a>
+            <a class="learnMore" href="https://www.linkedin.com/in/jonathan-kleinpeter-531a29179/"><img class="icon" src="img/linkedin-icon.png" alt="The linkedin icon"></a>
+            <a class="learnMore" href="https://github.com/jonkleinpet"><img id="gitHub" src="img/GitHub_Logo.png" alt="The github icon"></a>
           </div>
           `,
 
