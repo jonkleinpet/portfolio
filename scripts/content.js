@@ -10,15 +10,13 @@ const content = (function(){
       getView();
       render();
     });
-      
   }
+  
   // projects nav
   function handleProjects() {
     $('#js-projects').on('click', () => {  
       getView();
       render();
-      
-     
     });
   }
 
@@ -41,19 +39,12 @@ const content = (function(){
     return $(event.target).attr('value');
   }
 
-  function liAnimate() {
-    $('li').click(() => {
-      $('img').hide();
-      $('img').promise().done(render());
-    });
-  }
 
   // bind event listeners
   const handlers = function() {
     handleLanding();
     handleProjects();
     handleLearnMore();
-    liAnimate();
   };
 
   // render view

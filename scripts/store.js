@@ -31,7 +31,8 @@ const STORE = (function(){
         </div>
        
         <span class="project"><h2>Quiz App</h2> - A chance to test your Sci- Fi television knowledge, with bonus trivia</span>
-         <a id="code" href="https://github.com/thinkful-ei-armadillo/alex-jon-quiz">Code</a>
+         <span>Made With - JS / CSS / JQuery</span>
+        <a id="code" href="https://github.com/thinkful-ei-armadillo/alex-jon-quiz">Code</a>
         </div >`,
 
       footer: ''
