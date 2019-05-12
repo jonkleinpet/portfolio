@@ -1,0 +1,70 @@
+.project-container {
+  margin-bottom: 80px;
+}
+
+.project-container div {
+  margin-bottom: 10px;
+}
+
+.project-container img:hover {
+  opacity: .3;
+}
+
+.project-container span {
+  display: -webkit-box;
+  text-align: left;
+}
+
+.project-img {
+  transition: opacity .5s ease-in-out 0s;
+}
+
+.project-link-text {
+  position: relative;
+  z-index: -1;
+  top: 325px;
+  left: 615px;
+  font-size: 30px;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.project {
+  padding-bottom: 2%;
+}
+
+.code-icon {
+  width: 35px;
+  height: 33px;
+}
+
+.code-link {
+  display: inline-block;
+}
+
+.icon {
+  width: 25px;
+  height: auto;
+  margin: 0 10px;
+}
+
+.gitHub {
+  width: 80px;
+  height: auto;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.stack-list {
+  display: inline-flex;
+}
+
+.code-icon:hover {
+  opacity: .7;
+}

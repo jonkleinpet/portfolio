@@ -9,3 +9,7 @@ p {
   height: 85vh;
   justify-content: center;
 }
+
+.about-section a:hover {
+  opacity: .5;
+}

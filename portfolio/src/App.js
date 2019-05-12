@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import Landing from './components/LandingPage/Landing';
+import LandingRoute from './routes/LandingRoute/LandingRoute';
 import Sidebar from './components/Sidebar/Sidebar';
-import Project from './components/ProjectPage/Project';
-import About from './components/AboutPage/About';
+import ProjectRoute from './routes/ProjectRoute/ProjectRoute';
+import AboutRoute from './routes/AboutRoute/AboutRoute';
 import './App.css';
 
 class App extends Component {
@@ -13,9 +13,9 @@ class App extends Component {
         <div className="container">
           <Route path={ '/' } component={ Sidebar } />
           <div className="main">
-            <Route exact path={ '/' } component={ Landing } />
-            <Route path={ '/about' } component={ About } />
-            <Route path={ '/projects' } component={ Project } />
+            <Route exact path={ '/' } component={ LandingRoute } />
+            <Route path={ '/about' } component={ AboutRoute } />
+            <Route path={ '/projects' } component={ ProjectRoute } />
           </div>
         </div>
       </div>

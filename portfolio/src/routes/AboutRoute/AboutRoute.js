@@ -1,8 +1,8 @@
 import React from "react";
 import './styles/about.css';
-export default function About() {
+export default function AboutRoute() {
   return (
-    <section className="about-section">
+    <section className="ani-container about-section">
       <h1 className='learnMore'>About Me</h1>
       <p className='learnMore'>
         I've been brought up with computers around my whole life and enjoy

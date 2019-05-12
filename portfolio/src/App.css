@@ -41,7 +41,7 @@ ul {
   padding-left: 0;
 }
 
-li {
+.navigation li {
   font-size: 22px;
   line-height: 180%;
   cursor: pointer;
@@ -71,41 +71,21 @@ span {
   display: inline-block;
 }
 
+.ani-container {
+  transition: opacity .5s ease-in;
+  animation-duration: 1s;
+  animation-name: fadein;
+}
+
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* @media only screen and (max-width: 1632px) {
-  .main {
-    padding: 0 5%;
-    margin: 0 10%;
+  from {
+    opacity: 0;
   }
 
-  .container {
-    display: block;
+  to {
+    opacity: 1;
   }
-} */
+}
 
 
 @media only screen and (max-width: 650px) {
