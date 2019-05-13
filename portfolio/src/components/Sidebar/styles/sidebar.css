@@ -15,6 +15,10 @@
   top: 13%;
 }
 
+.navigation a:hover {
+  text-shadow: .5px .5px #bebebe;
+}
+
 .nav-divide {
   border-top: solid #003048 1px;
   margin: 15px 0;

@@ -24,11 +24,11 @@ export default class ProjectItem extends Component {
         <h1>Projects</h1>
         {projects.map((p, i) => (
           <section className='project-container' key={ i }>
-            <span>
+            { <span className="project-link-text">Live Demo</span> }
+            <span className="description">
               <h2>{p.title}</h2> - {p.description}
             </span>
             <a href={p.projectLink}>
-            { <span className="project-link-text">Live Demo</span> }
               <img
                 className="project-img"
                 src={ p.projectImage }
