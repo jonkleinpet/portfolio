@@ -6,6 +6,10 @@
   margin-bottom: 10px;
 }
 
+.project-container h3 {
+  display: inline-block;
+}
+
 .code-icon:hover {
   opacity: .7;
 }
@@ -59,6 +63,7 @@ img {
 
 .stack-list {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -68,5 +73,29 @@ img {
     top: 4in;
     z-index: -1;
     font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .stack-list {
+    display: block;
+  }
+
+  .description h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-container h3 {
+    display: inline-block;
+    border-bottom: solid 1px 
+    
+  }
+
+  .description {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
   }
 }

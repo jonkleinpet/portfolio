@@ -4,7 +4,8 @@ import ProjectContext from '../../context/ProjectContext';
 export default class ProjectItem extends Component {
   state = {
     inFocus: false,
-    isLoading: null
+    isLoading: null,
+    screenWidth: null
   }
 
   static contextType = ProjectContext;
@@ -15,6 +16,52 @@ export default class ProjectItem extends Component {
 
   leaveFocus = () => {
     this.setState({ inFocus: false })
+  }
+
+  resize = () => {
+    let currentWidth = window.innerWidth;
+    if (currentWidth !== this.state.screenWidth) {
+      this.setState({ screenWidth: currentWidth });
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => this.resize());
+    this.resize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize);
+  }
+
+  projectList = (p) => {
+    if (this.state.screenWidth < 700) {
+      return (
+        <>
+        <h3>Made With</h3>
+        <ul className='stack-list'>
+          { p.madeWith.map((t, i) => (
+            <li key={ i }>
+              { t }
+            </li>
+          )) }
+          </ul>
+        </>
+      )
+    } else {
+      return (
+        <>
+        <h3>Made With -{ " " }</h3>
+        <ul className='stack-list'>
+          {p.madeWith.map((t, i) => (
+            <li key={i}>
+              &nbsp;{t} {i === p.madeWith.length - 1 ? "" : "/"}
+            </li>
+          ))}
+          </ul>
+        </>
+      );
+    }
   }
 
   render() {
@@ -37,14 +84,7 @@ export default class ProjectItem extends Component {
                 onMouseLeave={ () => this.leaveFocus() }
                 />
             </a>
-            <ul className='stack-list'>
-              Made With -{" "}
-              {p.madeWith.map((t, i) => (
-                <li key={i}>
-                  &nbsp;{t} {i === p.madeWith.length - 1 ? "" : "/"}
-                </li>
-              ))}
-            </ul>
+            {this.projectList(p)}
             <div>View Code</div>
             <a
               className='code-link'
